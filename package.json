@@ -20,6 +20,8 @@
   "homepage": "https://github.com/joshuarodolfo86-cyber/virtual-open-house#readme",
   "dependencies": {
     "@google/genai": "^2.28.0",
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.6",
     "dotenv": "^18.0.7",
     "express": "^5.3.0"
   }
