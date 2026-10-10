@@ -1,0 +1,6 @@
+# Lab Reflection Answers
+
+1. **VR Accessibility & Motion Sickness**: To prevent motion sickness, teleportation markers on the ground are used instead of smooth continuous movement. Clear color changes on hover and visible UI panels also make navigation easier for users with different device setups.
+2. **Privacy Choices**: If device specs and location were logged, a prominent consent banner must inform users beforehand. Precise geolocation and IP addresses should not be stored to protect visitor privacy.
+3. **VR vs AR Comparison**: VR is better for students who cannot physically visit the campus, letting them explore virtually from home. AR is better for on-site visitors walking around campus who want real-time digital overlays on actual buildings using their smartphones.
+4. **IoT/Blockchain Extension**: IoT sensors could track real-time occupancy in the library and display live crowd levels in the tour. However, maintenance costs and hardware stability make it less practical for a short open house event.

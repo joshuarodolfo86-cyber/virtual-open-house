@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin - Visit Analytics</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; background: #f4f4f9; }
+    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 600px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Campus Visit Analytics</h1>
+    <p><strong>Total Visits:</strong> <span id="total">0</span></p>
+    <p><strong>Most Visited:</strong> <span id="most">-</span> | <strong>Least Visited:</strong> <span id="least">-</span></p>
+    <br>
+    <canvas id="chart"></canvas>
+  </div>
+
+  <script>
+    async function loadStats() {
+      const res = await fetch('/api/summary');
+      const data = await res.json();
+      document.getElementById('total').innerText = data.totalVisits;
+      document.getElementById('most').innerText = data.mostVisited;
+      document.getElementById('least').innerText = data.leastVisited;
+
+      new Chart(document.getElementById('chart'), {
+        type: 'bar',
+        data: {
+          labels: Object.keys(data.visitLogs),
+          datasets: [{
+            label: 'Number of Visits',
+            data: Object.values(data.visitLogs),
+            backgroundColor: '#4CC3D9'
+          }]
+        }
+      });
+    }
+    loadStats();
+  </script>
+</body>
+</html>

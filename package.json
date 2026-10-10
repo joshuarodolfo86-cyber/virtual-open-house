@@ -1,0 +1,26 @@
+{
+  "name": "virtual-open-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuarodolfo86-cyber/virtual-open-house.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/joshuarodolfo86-cyber/virtual-open-house/issues"
+  },
+  "homepage": "https://github.com/joshuarodolfo86-cyber/virtual-open-house#readme",
+  "dependencies": {
+    "@google/genai": "^2.28.0",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0"
+  }
+}
